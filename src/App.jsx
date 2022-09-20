@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllContacts from './Components/pages/AllContacts'
 import Home from './Components/pages/Home';
 import ContactDetails from './Components/pages/ContactDetails'
 import NewContact from './Components/pages/NewContact';
-import CreateContact from './Components/pages/CreateContact';
 import UpdateContact from './Components/pages/UpdateContact';
 import { UploadVcardFile } from './Components/UploadVcardFile';
 import 'semantic-ui-css/semantic.min.css'

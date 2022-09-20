@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AllContacts from './AllContacts'
 import Header from '../Header'
 
 const Home = () => {
   return (
     <div>
-      <Header text= "Welcome to Contact Manager App"/>
+      <Header text="Welcome to Contact Manager App" />
       <div>
         <div>
           <Link to='/contacts'> View All Contacts</Link>

@@ -4,9 +4,9 @@ import Header from '../Header'
 
 const ContactDetails = () => {
   const [contact, setContact] = useState("")
-
-  const params = useParams();
+  const params = useParams()
   const nav = useNavigate()
+
   useEffect(() => {
     fetch(
       `https://rp-contacts-manager-backend.herokuapp.com/contacts/${params.id}`,
@@ -38,18 +38,18 @@ const ContactDetails = () => {
       alert("There was an error deleting message");
     });
   }
-  
 
   const handleEditButtonClick = (e) => {
-      nav( `/contacts/${params.id}/update`)
+    nav(`/contacts/${params.id}/update`)
   }
 
-  const handleClick = (e) => { 
+  const handleClick = (e) => {
     nav('/contacts')
   }
+
   return (
     <div>
-      <Header text= "Contact Details" />
+      <Header text="Contact Details" />
       <p>Name: {contact.full_name}</p>
       {contact.nickname && <p>Nickname: {contact.nickname}</p>}
       {contact.organisation && <p>Organisation: {contact.organisation}</p>}
@@ -57,8 +57,8 @@ const ContactDetails = () => {
       {contact.role && <p>Role: {contact.role}</p>}
       {contact.gender && <p>Gender: {contact.gender}</p>}
       {(contact.work_email || contact.other_email || contact.email) && <p>Email:<br></br>
-      {contact.work_email && <p> Work: {contact.work_email}</p>}
-      {contact.other_email && <p>Other: {contact.other_email}</p>}
+        {contact.work_email && <p> Work: {contact.work_email}</p>}
+        {contact.other_email && <p>Other: {contact.other_email}</p>}
         {contact.email && <p>{contact.email}</p>}
       </p>}
       {(contact.home_phone_number || contact.work_phone_number || contact.mobile_number || contact.other_phone_number) && <p>Contact Number:<br></br>

@@ -1,14 +1,12 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
 
 export const UploadVcardFile = () => {
   const [vcard, setVcard] = useState()
   const nav = useNavigate()
 
   const handleUploadFile = (e) => {
-    // Simple POST request with a JSON body using fetch
     e.preventDefault()
     console.log("vcard: ", vcard);
     const requestOptions = {

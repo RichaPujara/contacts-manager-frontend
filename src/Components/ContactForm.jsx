@@ -1,18 +1,17 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { Form, Button, Input, Select, Radio } from 'antd'
+import { useEffect } from 'react'
+import { Form, Button, Input, Radio } from 'antd'
 import { useNavigate } from 'react-router-dom'
-
 
 const ContactForm = (props) => {
   const nav = useNavigate()
   const contact = props.data
-
   const [form] = Form.useForm();
 
   const onReset = () => {
     form.resetFields();
   };
+
   const onFinishFailed = (errorInfo) => {
     throw errorInfo;
   };
@@ -175,12 +174,12 @@ const ContactForm = (props) => {
         <Button type="primary" htmlType="submit" onSubmit={props.onSubmit}>
           Submit
         </Button>
-          <Button htmlType="reset" onClick={onCancel}>
-            Cancel
-          </Button> 
-          <Button htmlType="reset" onClick={onReset}>
-            Reset
-          </Button>
+        <Button htmlType="reset" onClick={onCancel}>
+          Cancel
+        </Button>
+        <Button htmlType="reset" onClick={onReset}>
+          Reset
+        </Button>
       </Form>
     </div>
   )

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import ContactForm from '../ContactForm'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Form } from 'antd'
 import Header from '../Header'
 
 const UpdateContact = () => {
-  const params = useParams();
-  const [form] = Form.useForm();
+  const params = useParams()
   const [contact, setContact] = useState("")
   const nav = useNavigate()
 
@@ -46,10 +44,11 @@ const UpdateContact = () => {
       .then(res => res.json())
       .then(jsonResponse => nav(`/contacts/${jsonResponse._id}`))
       .catch((err) => console.log(err))
-  };
+  }
+
   return (
     <>
-      <Header text= "Update Contact" />
+      <Header text="Update Contact" />
       <ContactForm data={contact} onFinish={handleUpdate} />
     </>
   )

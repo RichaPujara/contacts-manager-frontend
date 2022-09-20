@@ -1,7 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { SearchOutlined } from '@ant-design/icons'
 import './SearchBar.css'
-
 
 const SearchBar = (props) => {
 
