@@ -44,8 +44,7 @@ const UpdateContact = () => {
     }
     fetch(`https://rp-contacts-manager-backend.herokuapp.com/contacts/${params.id}`, metadata)
       .then(res => res.json())
-      .then(jsonResponse => nav(`/${jsonResponse._id}`))
-      .then(nav(`/contacts/${params.id}`))
+      .then(jsonResponse => nav(`/contacts/${jsonResponse._id}`))
       .catch((err) => console.log(err))
   };
   return (

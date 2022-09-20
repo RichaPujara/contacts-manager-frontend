@@ -28,7 +28,7 @@ const NewContact = (props) => {
     }
     fetch('https://rp-contacts-manager-backend.herokuapp.com/contacts/', metadata)
       .then(res => res.json())
-      .then(jsonResponse => nav(`/${jsonResponse._id}`))
+      .then(jsonResponse => nav(`/contacts/${jsonResponse._id}`))
       .then(res => form.resetFields())
       .catch((err) => console.log(err))
   };
