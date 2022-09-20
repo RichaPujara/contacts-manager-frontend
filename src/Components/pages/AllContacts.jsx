@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Header from '../Header.jsx'
 import ContactCard from '../ContactCard.jsx'
 import Navbar from '../Navbar.jsx'
@@ -7,12 +6,9 @@ import SearchBar from '../SearchBar.jsx'
 import './AllContacts.css'
 
 export default function AllContacts() {
-
   const [contacts, setContacts] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
   const [filteredData, setFilteredData] = useState([])
-
-  const nav = useNavigate();
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value)

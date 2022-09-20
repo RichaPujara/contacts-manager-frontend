@@ -8,7 +8,6 @@ export const UploadVcardFile = () => {
 
   const handleUploadFile = (e) => {
     e.preventDefault()
-    console.log("vcard: ", vcard);
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -16,15 +15,17 @@ export const UploadVcardFile = () => {
     };
     fetch('https://rp-contacts-manager-backend.herokuapp.com/contacts/import', requestOptions)
       .then(response => response.json())
-      .then(data => console.log("data: ", data));
+      .then(response => {
+        console.log("response: ", response[0])
+        nav(`/contacts/${response[0]._id}`)
+      })
+      .catch((err) => console.log(err));
   }
 
   const handleChange = (e) => {
     const fileReader = new FileReader();
     fileReader.readAsText(e.target.files[0], "UTF-8");
     fileReader.onload = e => {
-      console.log("e.target.result", e.target.result);
-      console.log("type e.target.result", typeof(e.target.result));
       setVcard(e.target.result);
     };
   };
