@@ -1,0 +1,13 @@
+ #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  box-sizing:border-box;
+  align-items: center;
+}
+body{
+  background-color: rgb(10, 10, 27);
+  color:rgb(237, 252, 250);
+}
+

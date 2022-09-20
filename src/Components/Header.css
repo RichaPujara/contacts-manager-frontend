@@ -1,0 +1,8 @@
+.header {
+  color: rgba(43, 162, 236, 0.781);
+  font-size: 3rem;
+  font-weight: 600;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin:0.5em;
+  font-style: italic;
+}

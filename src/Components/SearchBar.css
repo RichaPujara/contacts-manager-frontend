@@ -1,0 +1,9 @@
+.searchbar{
+  margin:auto;
+  align-items: center;
+}
+.search-input{
+  font-size: larger;
+  margin:auto;
+  width:50%;
+}
