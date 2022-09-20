@@ -16,7 +16,7 @@ export const UploadVcardFile = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ vcard: vcard })
     };
-    fetch('https://rp-contacts-manager-backend.herokuapp.com/import', requestOptions)
+    fetch('https://rp-contacts-manager-backend.herokuapp.com/contacts/import', requestOptions)
       .then(response => response.json())
       .then(data => console.log("data: ", data));
   }
